@@ -1,27 +1,162 @@
-body, html{
-  height:100%;
+body,
+html {
+  height: 100%;
 }
-body{
+body {
   margin: 0px;
-  background-color:#444;
+  background-image: url("space3.jpg");
+  /* background-size: cover; */
+  background-color: black;
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
+body,
+a:link,
+a:visited,
+a:active {
   color: lightblue;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+
+.title,
+.addDancerButton,
+.addDancerButton-2 {
+  padding: 5px 12px;
+  float: right;
 }
-.topbar{
-  height:32px;
+
+.topbar {
+  height: 32px;
   background-color: #555;
 }
-.title{
+.title {
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+.dancer,
+
+.shoot {
+  border: 0px solid orange;
+  border-radius: 13px;
+  position: absolute;
+  /* animation-duration: 0.3s;*/
+  animation: example-1 3s linear alternate;
 }
+
+@keyframes example-1 {
+  0% {
+  border: 9px solid orange;
+    top: 800px;
+  }
+  50% {
+    border: 8px solid red;
+    border-radius: 13px;
+    /* left: 900px */
+    top: 150px;
+  }
+  100% {
+    border: 0 solid orange;
+    display: none;
+  }
+}
+
+.unit {
+  position: absolute;
+  width: auto;
+  animation-duration: 0.3s;
+  animation: example-2 3s ease infinite alternate;
+}
+
+/* .unit:hover {
+  animation: example-2-1 0.001s ease infinite alternate;
+} */
+
+@keyframes example-2 {
+  from {
+    left: 300px
+    /* top: 500px */
+    /* transform: rotate(0deg); */
+  }
+  to {
+    /* border: 17px solid red; */
+    /* border-radius: 3px; */
+    /* left: 900px */
+    /* top: 0px; */
+    /* transform: rotate(360deg); */
+  }
+}
+@keyframes example-2-1 {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+/* .enermy {
+  border: 13px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  position: absolute;
+  animation-name: example-3;
+  animation-duration: 0.3s;
+  animation: target 1s ease infinite alternate;
+  transform-origin: 0% -500%
+} */
+/* .enermy:hover {
+  border: 25px solid rgb(255, 255, 255);
+  display: none;
+  border: 20px;
+  width: 200px;
+} */
+
+@keyframes target {
+  to {
+    transform: rotate(1000deg);
+  }
+}
+
+/* @-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+} */
+
+/* //////////////////////////////////// */
+.enermy {
+  /* border: 13px solid rgb(255, 255, 255); */
+  /* border-radius: 10px; */
+  position: absolute;
+  animation-duration: 0.3s;
+  animation: example-3 3s ease alternate;
+}
+
+@keyframes example-3 {
+  from {
+    left: 15px;
+  }
+  to {
+    /* border: 17px solid red; */
+    /* border-radius: 3px; */
+    /* left: 900px */
+  }
+}
+/* //////////////////////////////////// */
